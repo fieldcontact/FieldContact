@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="5ba3015471fe4a9d9997f9cde4293926" Name="Diagram1">
+        <EntityTypeShape EntityType="FCDatabaseModel.Application_Action" Width="1.5" PointX="3" PointY="15.125" />
+        <EntityTypeShape EntityType="FCDatabaseModel.Application_Controller" Width="1.5" PointX="0.75" PointY="15.375" />
+        <EntityTypeShape EntityType="FCDatabaseModel.CarRequest" Width="1.5" PointX="12" PointY="10.875" />
+        <EntityTypeShape EntityType="FCDatabaseModel.Car" Width="1.5" PointX="9.75" PointY="9.625" />
+        <EntityTypeShape EntityType="FCDatabaseModel.CarSchedule" Width="1.5" PointX="12" PointY="14.875" />
+        <EntityTypeShape EntityType="FCDatabaseModel.Company" Width="1.5" PointX="12.75" PointY="5.375" />
+        <EntityTypeShape EntityType="FCDatabaseModel.CompEmployee" Width="1.5" PointX="15.75" PointY="6.75" />
+        <EntityTypeShape EntityType="FCDatabaseModel.DailyForm" Width="1.5" PointX="12" PointY="18.625" />
+        <EntityTypeShape EntityType="FCDatabaseModel.EmployeeDetail" Width="1.5" PointX="9.75" PointY="13.875" />
+        <EntityTypeShape EntityType="FCDatabaseModel.General_RowStatus" Width="1.5" PointX="5.25" PointY="12.375" />
+        <EntityTypeShape EntityType="FCDatabaseModel.Membership_Role" Width="1.5" PointX="5.25" PointY="15.375" />
+        <EntityTypeShape EntityType="FCDatabaseModel.Membership_User" Width="1.5" PointX="7.5" PointY="14.5" />
+        <EntityTypeShape EntityType="FCDatabaseModel.OrderRequest" Width="1.5" PointX="15" PointY="14.875" />
+        <EntityTypeShape EntityType="FCDatabaseModel.Order" Width="1.5" PointX="15" PointY="10.5" />
+        <EntityTypeShape EntityType="FCDatabaseModel.Product" Width="1.5" PointX="12.75" PointY="23.5" />
+        <EntityTypeShape EntityType="FCDatabaseModel.Schedule" Width="1.5" PointX="15" PointY="18.875" />
+        <EntityTypeShape EntityType="FCDatabaseModel.ServiceForm" Width="1.5" PointX="18" PointY="13" />
+        <AssociationConnector Association="FCDatabaseModel.FK_Application_Action_Application_Controller" />
+        <AssociationConnector Association="FCDatabaseModel.FK_CarRequest_Cars" />
+        <AssociationConnector Association="FCDatabaseModel.FK_CarRequest_EmployeeDetails" />
+        <AssociationConnector Association="FCDatabaseModel.FK_CarSchedule_Cars" />
+        <AssociationConnector Association="FCDatabaseModel.FK_DailyForms_Cars" />
+        <AssociationConnector Association="FCDatabaseModel.FK_CarSchedule_EmployeeDetails" />
+        <AssociationConnector Association="FCDatabaseModel.FK_CarSchedule_EmployeeDetails1" />
+        <AssociationConnector Association="FCDatabaseModel.FK_CompEmployees_Companies" />
+        <AssociationConnector Association="FCDatabaseModel.FK_DailyForms_Companies" />
+        <AssociationConnector Association="FCDatabaseModel.FK_OrderRequest_Companies" />
+        <AssociationConnector Association="FCDatabaseModel.FK_Orders_Companies" />
+        <AssociationConnector Association="FCDatabaseModel.FK_Schedule_Companies" />
+        <AssociationConnector Association="FCDatabaseModel.FK_ServiceForms_Companies" />
+        <AssociationConnector Association="FCDatabaseModel.FK_ServiceForms_CompEmployees" />
+        <AssociationConnector Association="FCDatabaseModel.FK_ServiceForms_CompEmployees1" />
+        <AssociationConnector Association="FCDatabaseModel.FK_DailyForms_EmployeeDetails1" />
+        <AssociationConnector Association="FCDatabaseModel.FK_EmployeeDetails_Membership_User" />
+        <AssociationConnector Association="FCDatabaseModel.FK_OrderRequest_EmployeeDetails" />
+        <AssociationConnector Association="FCDatabaseModel.FK_Orders_EmployeeDetails1" />
+        <AssociationConnector Association="FCDatabaseModel.FK_Schedule_EmployeeDetails2" />
+        <AssociationConnector Association="FCDatabaseModel.FK_Schedule_EmployeeDetails3" />
+        <AssociationConnector Association="FCDatabaseModel.FK_ServiceForms_EmployeeDetails1" />
+        <AssociationConnector Association="FCDatabaseModel.FK_Membership_User_General_RowStatus" />
+        <AssociationConnector Association="FCDatabaseModel.FK_OrderRequest_Products" />
+        <AssociationConnector Association="FCDatabaseModel.FK_Orders_Products" />
+        <AssociationConnector Association="FCDatabaseModel.ActionXRole" />
+        <AssociationConnector Association="FCDatabaseModel.UserXAction" />
+        <AssociationConnector Association="FCDatabaseModel.UserXRole" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
