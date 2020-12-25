@@ -11,6 +11,7 @@ using UI.MVC.FieldContact.PageModel.User;
 
 namespace UI.MVC.FieldContact.Controllers
 {
+    //This is base controller that controls all of others
     public class BaseController : Controller
     {
         protected override void OnActionExecuting(ActionExecutingContext filterContext)
