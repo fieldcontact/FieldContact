@@ -1,4 +1,11 @@
-### Hi there 👋
+### This web application is for remote working companies as detailed below
+
+* Control on employees
+* Control on employee payments
+* Control on Company pool cars
+* Control on Customer profiles
+* Control on Project Management
+* Control on Labor (Man/day)
 
 <!--
 **fieldcontact/FieldContact** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
