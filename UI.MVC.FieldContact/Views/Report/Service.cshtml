@@ -1,0 +1,225 @@
+﻿
+@model UI.MVC.FieldContact.PageModel.Report.ServiceFormModel
+
+@section CssFiles
+{
+    <link href="/Content/global/plugins/select2/css/select2.min.css" rel="stylesheet" />
+    <link href="/Content/global/plugins/select2/css/select2-bootstrap.min.css" rel="stylesheet" />
+}
+
+@section JsFiles
+{
+    <script src="/Content/global/plugins/select2/js/select2.full.min.js"></script>
+    <script src="/Content/pages/scripts/components-select2.min.js"></script>
+    <script src="/Scripts/Report/Service.js?@DateTime.Now"></script>
+}
+
+
+
+<!-- BEGIN SAMPLE FORM PORTLET-->
+<div class="portlet light ">
+    <div class="portlet-title">
+        <div class="caption font-red-sunglo">
+            <i class="icon-settings font-red-sunglo"></i>
+            <span class="caption-subject bold uppercase"> Servis Formu Oluştur</span>
+        </div>
+    </div>
+    <div class="portlet-body form">
+        <form role="form">
+            <div class="form-body">
+                <div class="row">
+                    <div class="col-md-2">
+                        <h1 style="font-size:80px; color:gray;"> <b> SCS </b></h1>
+                    </div>
+                    <div class="col-md-7">
+                        <br /><span><b> SCS Bina Otomasyon, Mühendislik ve Tesisat Ltd. Şti  </b></span>
+                        <pre>
+Bağdat Cad. Rüzgargülü Çıkmazı No:1/4 Kızıltoprak 34724 İstanbul</>
+Tel     : +90 216 - 336 79 66 PBX
+Faks    : +90 216 - 336 79 66 PBX
+Web     : www.scsotomasyon.com
+e-posta : info@scsotomasyon.com
+                        </pre>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-10">
+                        <p style="font-size:15px; color:black"><b><ins>TEKNİK SERVİS FORMU / TECHNIC SERVICE FORM</ins></b></p>
+                    </div>
+                    <div class="col-md-2">
+                        <p class="pull-right"> Seri: <span style="color:red">MY001</span>  </p>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-1">
+                            <label>Firma   :</label>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="input-group">
+                                <select id="span_small" class="form-control select2 companySelection">
+                                    <optgroup label="Kayıtlı Firmalar">
+
+
+                                        @for (int i = 0; i < Model.Companies.Count; i++)
+                                        {
+                                            <option value="@Model.Companies[i].ID">@Model.Companies[i].Name</option>
+                                        }
+                                    </optgroup>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-1">
+                            <label>Adres    :</label>
+                        </div>
+                        <div class="col-md-7">
+                            <p id="companyAdress">.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-1">
+                            <label>Firma Yetkilisi  :</label>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="input-group">
+                                @*<select class="js-data-example-ajax" disabled></select>*@
+                                <select id="companyEmployee1" class="form-control companyEmployee1" disabled>
+                                    @*<optgroup label="Şantiye Yetkilisi">
+                                        @for (int i = 0; i < Model.Companies.Count; i++)
+                                        {
+                                            <option value="@Model.Companies[i].ID">@Model.Companies[i].Name</option>
+                                        }
+                                    </optgroup>*@
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-1">
+                            <label>GSM No / e-mail:</label>
+                        </div>
+                        <div class="col-md-7">
+                            <p> Gsm numarası veya e-mail adresi</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-1">
+                            <label>Şantiye Yetkilisi  :</label>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="input-group">
+                                <select id="span_small" class="form-control select2 companyEmployee2" disabled>
+                                    <optgroup label="Şantiye Yetkilisi">
+                                        @for (int i = 0; i < Model.Companies.Count; i++)
+                                        {
+                                            <option value="@Model.Companies[i].ID">@Model.Companies[i].Name</option>
+                                        }
+                                    </optgroup>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-1">
+                            <label>GSM No / e-mail:</label>
+                        </div>
+                        <div class="col-md-7">
+                            <p> Gsm numarası veya e-mail adresi</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Outline Checkboxes</label>
+                    <div class="mt-checkbox-list">
+                        <label class="mt-checkbox mt-checkbox-outline">
+                            HVAC Otomasyonu
+                            <input type="checkbox" value="1" name="HVAC" />
+                            <span></span>
+                        </label>
+                        <label class="mt-checkbox mt-checkbox-outline">
+                            Toplantı
+                            <input type="checkbox" value="1" name="toplanti" />
+                            <span></span>
+                        </label>
+                        <label class="mt-checkbox mt-checkbox-outline">
+                            Ücretli
+                            <input type="checkbox" value="1" name="ucretli" />
+                            <span></span>
+                        </label>
+                        <label class="mt-checkbox mt-checkbox-outline">
+                            Ücretsiz
+                            <input type="checkbox" value="1" name="ucretsiz" />
+                            <span></span>
+                        </label>
+                        <label class="mt-checkbox mt-checkbox-outline">
+                            Arıza Servis
+                            <input type="checkbox" value="1" name="arizaServis" />
+                            <span></span>
+                        </label>
+                        <label class="mt-checkbox mt-checkbox-outline">
+                            Süpervizyon
+                            <input type="checkbox" value="1" name="supervision" />
+                            <span></span>
+                        </label>
+                        <label class="mt-checkbox mt-checkbox-outline">
+                            Devreye Alma
+                            <input type="checkbox" value="1" name="devreyeAlma" />
+                            <span></span>
+                        </label>
+                        <label class="mt-checkbox mt-checkbox-outline">
+                            Eğitim
+                            <input type="checkbox" value="1" name="educat" />
+                            <span></span>
+                        </label>
+                        <label class="mt-checkbox mt-checkbox-outline">
+                            Montaj ve Uç Bağlantısı
+                            <input type="checkbox" value="1" name="montaj" />
+                            <span></span>
+                        </label>
+                        <label class="mt-checkbox mt-checkbox-outline">
+                            Bakım
+                            <input type="checkbox" value="1" name="bakim" />
+                            <span></span>
+                        </label>
+                        <label class="mt-checkbox mt-checkbox-outline">
+                            1.Bakım
+                            <input type="checkbox" value="1" name="bakim1" />
+                            <span></span>
+                        </label>
+                        <label class="mt-checkbox mt-checkbox-outline">
+                            2.Bakım
+                            <input type="checkbox" value="1" name="bakim2" />
+                            <span></span>
+                        </label>
+                        <label class="mt-checkbox mt-checkbox-outline">
+                            3.Bakım
+                            <input type="checkbox" value="1" name="bakim3" />
+                            <span></span>
+                        </label>
+                        <label class="mt-checkbox mt-checkbox-outline">
+                            Malzeme Teslim
+                            <input type="checkbox" value="1" name="teslim" />
+                            <span></span>
+                        </label>
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <label>Yapılacak İşin Tanımı</label>
+                    <textarea class="form-control" rows="2" id="jobDesc"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Yapılan İş/Rapor</label>
+                    <textarea class="form-control" rows="10" id="serviceDetails"></textarea>
+                </div>
+            </div>
+            <div class="form-actions">
+                <button type="button" class="btn blue" id="saveForm">Raporu Gönder</button>
+                <button type="reset" class="btn default" id="cancelForm">Cancel</button>
+            </div>
+        </form>
+    </div>
+</div>
+<!-- END SAMPLE FORM PORTLET-->
